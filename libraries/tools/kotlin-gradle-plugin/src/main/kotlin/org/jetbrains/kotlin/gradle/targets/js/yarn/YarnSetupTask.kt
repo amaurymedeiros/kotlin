@@ -62,6 +62,6 @@ open class YarnSetupTask : DefaultTask() {
     }
 
     companion object {
-        const val NAME: String = "yarnSetup"
+        const val NAME: String = "kotlinYarnSetup"
     }
 }

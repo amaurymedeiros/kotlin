@@ -31,13 +31,13 @@ open class NodeJsPlugin : Plugin<Project> {
     }
 
     private fun setupCleanNodeModulesTask(project: Project) {
-        project.tasks.create("cleanNodeModules", Delete::class.java) {
+        project.tasks.create("cleanKotlinNodeModules", Delete::class.java) {
             it.description = "Deletes nodeJs projects created during build"
             it.group = BasePlugin.BUILD_GROUP
             it.delete.add(project.nodeJs.root.rootPackageDir)
         }
 
-        project.tasks.create("cleanGradleNodeModules", Delete::class.java) {
+        project.tasks.create("cleanKotlinGradleNodeModules", Delete::class.java) {
             it.description = "Deletes node modules imported from gradle external modules"
             it.group = BasePlugin.BUILD_GROUP
             it.delete.add(project.nodeJs.root.nodeModulesGradleCacheDir)

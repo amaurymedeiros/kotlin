@@ -93,6 +93,6 @@ open class NodeJsSetupTask : DefaultTask() {
     }
 
     companion object {
-        const val NAME: String = "nodeJsSetup"
+        const val NAME: String = "kotlinNodeJsSetup"
     }
 }
